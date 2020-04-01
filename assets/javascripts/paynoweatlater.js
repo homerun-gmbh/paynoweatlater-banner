@@ -2,7 +2,7 @@
 ---
 
 (function() {
-  function createBanner(name) {
+  function createBanner(url) {
     var bannerEl = document.createElement('div');
 
     bannerEl.classList.add('paynoweatlater-banner');
@@ -13,7 +13,7 @@
         '<p class="paynoweatlater-banner__text">',
           'Kaufe jetzt einen Gutschein bei #PayNowEatLater und hilf uns dabei die Krise zu überstehen.',
         '</p>',
-        '<a href="https://www.paynoweatlater.de/at/', name, '/" target="_blank" class="paynoweatlater-banner__button">Zum Gutscheinkauf</a>',
+        '<a href="', url, '" target="_blank" class="paynoweatlater-banner__button">Zum Gutscheinkauf</a>',
       '</div>'
     ].join('');
 
@@ -42,23 +42,31 @@
     document.head.appendChild(stylesheet);
   }
 
+  function isAllowedURL(url) {
+    isPayNowEatLaterURL = /^https:\/\/www\.paynoweatlater\.de[^ "]+$/;
+
+    return isPayNowEatLaterURL.test(url);
+  }
+
   var p = window.paynoweatlater = window.paynoweatlater || {};
 
   if (!p.invoked) {
     p.invoked = true;
 
-    p.appendBannerEl = function(name) {
-      var bannerEl = createBanner(name);
+    p.appendBannerEl = function(url) {
+      var bannerEl = createBanner(url);
 
       document.body.appendChild(bannerEl);
     };
 
-    p.addBanner = function(name) {
-      injectStylesheet();
+    p.addBanner = function(url) {
+      if (isAllowedURL(url))  {
+        injectStylesheet();
 
-      document.addEventListener('DOMContentLoaded', function() {
-        p.appendBannerEl(name);
-      });
+        document.addEventListener('DOMContentLoaded', function() {
+          p.appendBannerEl(url);
+        });
+      }
     };
   }
 })();

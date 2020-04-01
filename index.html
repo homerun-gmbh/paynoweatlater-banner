@@ -6,7 +6,7 @@ layout: default
 ---
 <script type="text/javascript" src="{{ '/assets/javascripts/paynoweatlater.js' | relative_url }}"></script>
 <script type="text/javascript">
-  paynoweatlater.addBanner('balz-und-balz-hamburg');
+  paynoweatlater.addBanner('https://www.paynoweatlater.de/at/balz-und-balz-hamburg/');
 </script>
 
 <section class="section">
@@ -14,50 +14,62 @@ layout: default
     <h1 class="title">
      #PayNowEatLater
     </h1>
-
     <h2 class="subtitle">
       Integration des Banners auf der eigenen Website
     </h2>
 
     <div class="content">
       <p>
-        Um das Banner auf der eigenen Website zu integrieren genügt es die
-        folgenden Script-Tags irgendwo im HTML auf der Seite einzufügen.
+        Um das Banner auf der eigenen Website zu integrieren, genügt es die
+        folgenden Script-Tags irgendwo im HTML auf der Seite einzufügen:
 
 <pre>
 &lt;script type="text/javascript" src="{{ '/assets/javascripts/paynoweatlater.js' | absolute_url }}">&lt;/script>
 &lt;script type="text/javascript">
-  paynoweatlater.addBanner('NAMEN_EINFÜGEN');
+  paynoweatlater.addBanner('GUTSCHEIN_URL');
 &lt;/script>
 </pre>
       </p>
 
       <p>
-        Damit die die richtige
-        Gutscheinseite geladen wird, muss <code>'NAMEN_EINFÜGEN'</code>
-        auf den Namen in der Adresse der Gutscheinseite auf
+        Damit auf die eigene Gutscheinseite verwiesen wird, muss 
+        <code>GUTSCHEIN_URL</code> durch die entsprechende Adresse bei 
         <a href="https://www.paynoweatlater.de" target="_blank">www.paynoweatlater.de</a>
-        angpasst werden.
+        ersetzt werden.
       </p>
 
+      <h3>Beispiel</h3>
       <p>
         Für
-        <a href="https://www.paynoweatlater.de/at/balz-und-balz-hamburg/" target="_blank">Balz &amp; Balz</a>
-        lautet die Adresse der Gutschein-Seite zum Beispiel
+        <a href="https://www.paynoweatlater.de/at/balz-und-balz-hamburg/" target="_blank">Balz und Balz</a>
+        zum Beispiel lautet die Adresse 
         <code>https://www.paynoweatlater.de/at/balz-und-balz-hamburg/</code>.
-        Der einzufügende Name lautet also <code>balz-und-balz-hamburg</code>.
-        Beim Einfügen dürfen die Anführungszeichen nicht vergessen werden, so
-        dass die vollständige Zeile so aussieht:
-        <code>paynoweatlater.addBanner('balz-und-balz-hamburg');</code>
+        Diese Adresse muss anstelle von <code>GUTSCHEIN_URL</code> 
+        angegeben werden. Bitte vergesst beim Ändern nicht die 
+        Anführungszeichen, ohne diese funktioniert es nicht.
       </p>
       <p>
-        Zum Ausprobieren ist das Banner auf dieser Seite wie im obigen Beispiel
-        beschrieben konfiguriert.
-      </p>
-    </div>
+        Für Balz und Balz sehen die Script-Tags nach der Änderung so aus:
 
-    <div class="buttons">
-      <a class="button is-text" href="{{ 'banner-preview' | relative_url }}">Entwicklung: Zur Banner-Vorschau ↗ </a>
+<pre>
+&lt;script type="text/javascript" src="{{ '/assets/javascripts/paynoweatlater.js' | absolute_url }}">&lt;/script>
+&lt;script type="text/javascript">
+  paynoweatlater.addBanner('https://www.paynoweatlater.de/at/balz-und-balz-hamburg/');
+&lt;/script>
+</pre>
+      </p>
+
+      <p>
+        Zum Ausprobieren ist das Banner auf dieser Seite wie oben angegeben 
+        konfiguriert.
+      </p>
+
+      <h3>Support</h3>
+      <p>
+        Falls etwas nicht klappen sollte, schreibt uns eine E-Mail an
+        <a href="mailto:{{ site.email }}">tech@paynoweatlater.de</a>
+        und wir unterstützen euch gerne.
+      </p>
     </div>
   </div>
 </section>
