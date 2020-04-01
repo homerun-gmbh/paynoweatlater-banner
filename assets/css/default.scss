@@ -1,0 +1,16 @@
+---
+---
+
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+@import "bulma/utilities/_all";
+@import "bulma/base/_all";
+@import "bulma/elements/button";
+@import "bulma/elements/container";
+@import "bulma/elements/content";
+@import "bulma/elements/notification";
+@import "bulma/elements/title";
+@import "bulma/form/_all";
+@import "bulma/layout/hero";
+@import "bulma/layout/section";

@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ 'assets/css/banner.css' | relative_url }}" />
+<script type="text/javascript">
+  function hideBanner(e) {
+    var bannerEls = document.getElementsByClassName('paynoweatlater-banner');
+
+    Array.prototype.forEach.call(bannerEls, function(banner) {
+      banner.classList.add('paynoweatlater-banner--fade');
+    });
+
+    e.preventDefault();
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var toTextButtonEl = document.getElementById('banner-to-text-button');
+    toTextButtonEl.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      var bannerEl = document.getElementById('banner-preview');
+      var bannerTextEl = document.getElementById('banner-text');
+      var bannerHTML = bannerEl.innerHTML;
+
+      bannerTextEl.innerText = bannerHTML.trim();
+      bannerTextEl.classList.remove('is-hidden');
+    });
+
+    var dismissBtn = document.querySelector('.paynoweatlater-banner__dismiss');
+    dismissBtn.addEventListener('click', hideBanner);
+  });
+</script>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">
+      #PayNowEatLater
+    </h1>
+
+    <h2 class="subtitle">
+      Banner-Vorschau zum einfacheren Editieren
+    </h2>
+
+    <div class="content">
+      <p>
+        Es ist einfacher das Banner in HTML zu editieren, es wird aber im 
+        JavaScript als String gebraucht. Ein Klick auf »Als Text« zeigt den 
+        Quelltext des Banners als Text an, so dass es einfach kopiert werden 
+        kann. Im JavaScript muss dieser dann »nur noch« eingefügt und 
+        entsprechend formatiert werden.
+      </p>
+
+      <div class="notification">
+        In seiner ursprünglichen Version ist das Banner so konfiguriert, dass
+        es bei einer Bildschirmbreite kleiner <code>500px</code> die volle 
+        Breite ausnutzt.
+      </div>
+
+      <pre id="banner-text" class="is-hidden"></pre>
+    </div>
+
+    <p class="buttons">
+      <a id="banner-to-text-button" class="button is-primary" href="#">Zeige HTML</a>
+    </p>
+  </div>
+</section>
+
+<div id="banner-preview">
+  {% include banner.html %}
+</div>

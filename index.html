@@ -1,0 +1,64 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+---
+<script type="text/javascript" src="{{ '/assets/javascripts/paynoweatlater.js' | relative_url }}"></script>
+<script type="text/javascript">
+  paynoweatlater.addBanner('balz-und-balz-hamburg');
+</script>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">
+     #PayNowEatLater
+    </h1>
+
+    <h2 class="subtitle">
+      Integration des Banners auf der eigenen Website
+    </h2>
+
+    <div class="content">
+      <p>
+        Um das Banner auf der eigenen Website zu integrieren genügt es die
+        folgenden Script-Tags irgendwo im HTML auf der Seite einzufügen.
+
+<pre>
+&lt;script type="text/javascript" src="{{ '/assets/javascripts/paynoweatlater.js' | absolute_url }}">&lt;/script>
+&lt;script type="text/javascript">
+  paynoweatlater.addBanner('NAMEN_EINFÜGEN');
+&lt;/script>
+</pre>
+      </p>
+
+
+      <p>
+        Damit die die richtige
+        Gutscheinseite geladen wird, muss <code>'NAMEN_EINFÜGEN'</code>
+        auf den Namen in der Adresse der Gutscheinseite auf
+        <a href="https://www.paynoweatlater.de" target="_blank">www.paynoweatlater.de</a>
+        angpasst werden.
+      </p>
+
+      <p>
+        Für
+        <a href="https://www.paynoweatlater.de/at/balz-und-balz-hamburg/" target="_blank">Balz &amp; Balz</a>
+        lautet die Adresse der Gutschein-Seite zum Beispiel
+        <code>https://www.paynoweatlater.de/at/balz-und-balz-hamburg/</code>.
+        Der einzufügende Name lautet also <code>balz-und-balz-hamburg</code>.
+        Beim Einfügen dürfen die Anführungszeichen nicht vergessen werden, so
+        dass die vollständige Zeile so aussieht:
+        <code>paynoweatlater.addBanner('balz-und-balz-hamburg');</code>
+      </p>
+      <p>
+        Zum Ausprobieren ist das Banner auf dieser Seite wie im obigen Beispiel
+        beschrieben konfiguriert.
+      </p>
+    </div>
+
+    <div class="buttons">
+      <a class="button is-text" href="{{ 'banner-preview' | relative_url }}">Entwicklung: Zur Banner-Vorschau ↗ </a>
+    </div>
+  </div>
+</section>
