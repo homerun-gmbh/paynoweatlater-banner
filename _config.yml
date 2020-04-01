@@ -23,8 +23,8 @@ email: mail@paynoweatlater.de
 # description: >-
 #   Hilf mit, die vielen Restaurants, Bars, Cafés und kleinen Lokale finanziell zu 
 #   unterstützen und sicher durch die Corona-Krise zu bringen!
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/paynoweatlater-banner" # the subpath of your site, e.g. /blog
+url: "https://homerun-gmbh.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 sass:
   style: compressed
