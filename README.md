@@ -12,3 +12,7 @@ Sind Ruby und Bundler installiert, können die Dependencies können mit
 Unterverzeichnis aus gehostet wird. Die lokale URL zum Testen ist also
 nicht `http://127.0.0.1:4000`, sondern
 `http://127.0.0.1:4000/paynoweatlater-banner/`
+
+## Lizenz
+
+© 2020 HomeRun GmbH – MIT License
