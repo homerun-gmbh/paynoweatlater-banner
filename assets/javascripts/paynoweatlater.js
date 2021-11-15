@@ -11,7 +11,7 @@
       '<div class="paynoweatlater-banner__wrapper">',
         '<img class="paynoweatlater-banner__logo" src="{{ "assets/images/logo.png" | absolute_url }}" alt="#PayNowEatLater - Logo" />',
         '<p class="paynoweatlater-banner__text">',
-          'Kaufe jetzt einen Gutschein bei #PayNowEatLater und hilf uns dabei die Krise zu überstehen.',
+          'Unsere Restaurantgutscheine zum Verschenken oder selber nutzen findest du auf #PayNowEatLater',
         '</p>',
         '<a href="', url, '" target="_blank" class="paynoweatlater-banner__button">Zum Gutscheinkauf</a>',
       '</div>'
