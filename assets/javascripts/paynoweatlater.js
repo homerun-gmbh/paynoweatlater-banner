@@ -5,7 +5,7 @@
   function createBanner(url) {
     var bannerEl = document.createElement('div');
     if(url.includes('paynoweatlater.de')){
-      url.replace("paynoweatlater.de/at/", "bon-bon.de/gutschein/");
+      url = url.replace("paynoweatlater.de/at/", "bon-bon.de/gutschein/");
     }
     bannerEl.classList.add('paynoweatlater-banner');
     bannerEl.innerHTML = [
@@ -13,7 +13,7 @@
       '<div class="paynoweatlater-banner__wrapper">',
         '<img class="paynoweatlater-banner__logo" src="{{ "assets/images/logo.png" | absolute_url }}" alt="#PayNowEatLater - Logo" />',
         '<p class="paynoweatlater-banner__text">',
-          'Unsere Restaurantgutscheine zum Verschenken oder selbst nutzen findest du auf BON BON',
+          'Unsere Restaurantgutscheine zum Verschenken oder selbst nutzen findest du auf ',
         '</p>',
         '<a href="', url, '" target="_blank" class="paynoweatlater-banner__button">Zum Gutscheinkauf</a>',
       '</div>'
