@@ -94,7 +94,7 @@ $text: white;
 
 .paynoweatlater-banner__button {
   background-color: $button;
-  color: white;
+  color: white!important;
   border-radius: 0.2em;
   padding: .5em 1em;
   font-size: 1.25em;
@@ -107,6 +107,6 @@ $text: white;
 
   &:hover {
     background-color: darken($button, 15%);
-    color: white;
+    color: white!important;
   }
 }
