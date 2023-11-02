@@ -7,6 +7,7 @@
     if(url.includes('paynoweatlater.de')){
       url = url.replace("paynoweatlater.de/at/", "bon-bon.de/gutschein/");
     }
+    url = url + "?popup";
     bannerEl.classList.add('paynoweatlater-banner');
     bannerEl.innerHTML = [
       '<span class="paynoweatlater-banner__dismiss">×</span>',
