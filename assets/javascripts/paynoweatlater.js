@@ -4,6 +4,7 @@
 (function() {
   function createBanner(url) {
     var bannerEl = document.createElement('div');
+    console.log(url);
     if(url.includes('paynoweatlater.de')){
       url = url.replace("paynoweatlater.de/at/", "bon-bon.de/gutschein/");
     }
@@ -47,8 +48,9 @@
 
   function isAllowedURL(url) {
     isPayNowEatLaterURL = /^https:\/\/www\.paynoweatlater\.de[^ "]+$/;
+    isBonBonURL = /^https:\/\/www\.bon-bon\.de[^ "]+$/;
 
-    return isPayNowEatLaterURL.test(url);
+    return isPayNowEatLaterURL.test(url) || isBonBonURL.test(url);
   }
 
   var p = window.paynoweatlater = window.paynoweatlater || {};
@@ -69,6 +71,8 @@
         document.addEventListener('DOMContentLoaded', function() {
           p.appendBannerEl(url);
         });
+      } else {
+         console.log('URL ist nicht erlaubt.');
       }
     };
   }
