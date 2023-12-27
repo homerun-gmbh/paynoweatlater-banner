@@ -92,6 +92,25 @@ $text: white;
   margin: 1em 0;
 }
 
+.paynoweatlater-banner__subtext {
+  margin: 0.5em 0;
+  font-size:9px;
+  color:#fff
+}
+
+.paynoweatlater-banner__subtext {
+  margin: 0.5em 0 0 0;
+  font-size:12px;
+  color:#999;
+  transform:translateY(6px);
+}
+.paynoweatlater-banner__sublink{
+  color:#999;
+}
+.paynoweatlater-banner__sublink:hover{
+  color:#999;
+}
+
 .paynoweatlater-banner__button {
   background-color: $button;
   color: white!important;

@@ -18,6 +18,7 @@
           'Unsere Restaurantgutscheine zum Verschenken oder selbst nutzen findest du auf BON BON',
         '</p>',
         '<a title="Zum Kauf unseres Restaurant Gutscheins auf BON BON" href="', url, '" target="_blank" class="paynoweatlater-banner__button">Zum Gutscheinkauf</a>',
+        '<p class="paynoweatlater-banner__subtext">powered by <a title="Zum Kauf unseres Restaurant Gutscheins auf BON BON" href="https://gutscheinsystem.bon-bon.de/" target="_blank" class="paynoweatlater-banner__sublink">BON BON - Das Gutscheinsystem für die Gastronomie</a></p>'
       '</div>'
     ].join('');
 
