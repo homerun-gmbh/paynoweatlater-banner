@@ -100,15 +100,17 @@ $text: white;
 
 .paynoweatlater-banner__subtext {
   margin: 0.5em 0 0 0;
-  font-size:12px;
+  font-size:9px;
   color:#999;
   transform:translateY(6px);
 }
 .paynoweatlater-banner__sublink{
   color:#999;
+  text-decoration:none;
 }
 .paynoweatlater-banner__sublink:hover{
   color:#999;
+  text-decoration:underline;
 }
 
 .paynoweatlater-banner__button {
